@@ -2,12 +2,14 @@ import type {Action, ThunkAction} from "@reduxjs/toolkit"
 import {configureStore} from "@reduxjs/toolkit"
 import {$api} from "./services/api.ts";
 import auth from '../features/user/userSlice.ts'
+import selecto from '../features/filesSlice.ts'
 import {listenerMiddleware} from "../middleware/auth.ts";
 
 export const store = configureStore({
     reducer: {
         [$api.reducerPath]: $api.reducer,
         auth,
+        selecto
     },
     middleware: (getDefaultMiddleware) => {
         return getDefaultMiddleware()
