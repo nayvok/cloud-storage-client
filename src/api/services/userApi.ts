@@ -23,7 +23,7 @@ export const userApi = $api.injectEndpoints({
                 body: userData
             }),
         }),
-        getMedia: builder.query({
+        getMedia: builder.query<{file: object}, number>({
             query: () => ({
                 url: `/media`,
                 method: 'GET'
@@ -35,9 +35,9 @@ export const userApi = $api.injectEndpoints({
                 method: 'GET'
             }),
         }),
-        uploadMedia: builder.query({
+        uploadMedia: builder.mutation({
             query: (mediaData) => ({
-                url: `/media`,
+                url: `/media/upload`,
                 method: 'POST',
                 body: mediaData
             }),
@@ -59,7 +59,8 @@ export const {
     useLazyGetMediaQuery,
     useGetMediaByIdQuery,
     useLazyGetMediaByIdQuery,
-    useDeleteMediaByIdMutation
+    useDeleteMediaByIdMutation,
+    useUploadMediaMutation
 } = userApi
 
 export const {
