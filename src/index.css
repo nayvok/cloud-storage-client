@@ -1,12 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-*,
-html,
-body{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components {
+    html, body {
+        @apply bg-[#F6F7F8] font-Roboto p-0 m-0
+    }
+    .file-active {
+        @apply bg-[rgba(0,0,0,0.2)]
+    }
 }
