@@ -1,17 +1,19 @@
 import {FC, useState} from "react";
 import {Alert, Button, Form, Input} from "antd";
-import {useLoginMutation} from "../../api/services/userApi.ts";
+import {useLazyGetMediaQuery, useLoginMutation} from "../../api/services/userApi.ts";
 import {useNavigate} from "react-router-dom";
 
 const LoginForm: FC = () => {
 
     const [error, setError] = useState(false)
     const [login] = useLoginMutation()
+    const [triggerMediaQuery] = useLazyGetMediaQuery()
     const navigate = useNavigate()
 
     const onSubmit = async (values: { email: string, password: string }) => {
         try {
             await login(values).unwrap()
+            await triggerMediaQuery(1)
             navigate('/')
         } catch (e) {
             setError(true)
