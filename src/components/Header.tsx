@@ -17,7 +17,7 @@ const Header = () => {
 
     return (
         <Layout.Header className={'bg-[#1677ff] flex justify-center px-8'}>
-            <div className={'w-full sm:max-w-[1200px] flex items-center justify-between'}>
+            <div className={'w-full sm:max-w-[1226px] flex items-center justify-between'}>
                 <h1 className={'text-xl font-bold text-white flex items-center gap-3'}><CloudServerOutlined className={'text-3xl'}/> Cloud Storage</h1>
                 <Button onClick={handleLogout} size={'middle'}>Выход</Button>
             </div>
