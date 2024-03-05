@@ -67,5 +67,3 @@ const FileCard: FC<IFile> = ({id, fileName, name, createdAt}) => {
 };
 
 export default FileCard;
-
-//style={{width: '80px', height: '80px', objectFit: 'cover', borderRadius: '5px'}}
