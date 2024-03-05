@@ -1,30 +1,30 @@
-# React + TypeScript + Vite
+# Cloud storage client
+This web app is a test task for the KITACTIVE<br>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+## The interface can:
+* Authorization/Registration/Logout
+* Showing files, uploading files by clicking, deleting files
+* Showing the number of files
+* Output previews for images and icons for files
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Hint:
+* To delete files, select them and then click the "Delete" button. The selected files will then be deleted.
 
-## Expanding the ESLint configuration
+## Technologies:
+* TypeScript
+* React + Vite
+* Redux Toolkit
+* RTK Query
+* Ant design
+* Tailwind
+* react-router-dom
+* React selecto
+* axios
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Fot starting the project, please, type the following command in your terminal:<br>
+`git clone https://github.com/nayvok/cloud-storage-client.git`<br>
+Then install dependencies:<br>
+`npm install`<br>
+To launch the app [http://localhost:5173](http://localhost:5173):<br>
+`npm run dev`<br>
