@@ -13,7 +13,7 @@ const RegisterForm: FC = () => {
     const onSubmit = async (values: {email: string, password: string, name: string}) => {
         try {
             await register(values).unwrap()
-            navigate('/auth')
+            navigate('/')
         } catch (e) {
             setError(true)
         }
