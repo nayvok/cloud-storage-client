@@ -8,7 +8,7 @@ import {selectFiles} from "../features/user/userSlice.ts";
 
 const UploadButton = () => {
 
-    const [upload, {isLoading, isSuccess, isError}] = useUploadMediaMutation()
+    const [upload, {isLoading}] = useUploadMediaMutation()
     const [triggerQuery] = useLazyGetMediaQuery()
 
     const [isMaxFiles, setIsMaxFiles] = useState(false)
@@ -31,33 +31,18 @@ const UploadButton = () => {
     }
 
     useEffect(() => {
-        if (isError) {
-            notification.error({
-                message: "Ошибка!",
-                description: "Не удалось загрузить файл",
-                duration: 2,
-            });
-        }
-        if (isSuccess) {
-            notification.success({
-                message: "Успешно!",
-                description: "Файл загружен",
-                duration: 2,
-            });
-        }
         if (filesCount.length >= 20) {
             setIsMaxFiles(true)
         } else {
             setIsMaxFiles(false)
         }
-    }, [isError, isSuccess, filesCount]);
+    }, [filesCount]);
 
     return (
         <Upload
             customRequest={onUploadSuccess}
             showUploadList={false}
             multiple
-            maxCount={3}
         >
             <Button type={"primary"}
                     icon={<CloudUploadOutlined/>}
