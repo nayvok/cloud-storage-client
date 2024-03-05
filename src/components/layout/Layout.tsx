@@ -25,7 +25,7 @@ const Layout = () => {
             <Header/>
             <main className={'px-8'}>
                 <Container>
-                    <div className={'h-full flex flex-col gap-3 px-6 py-10'}>
+                    <div className={'h-full flex flex-col gap-3 px-6 py-10 items-center'}>
                         <UploadButton/>
                         <DeleteButton/>
                         <h1 className={'text-lg text-center'}>Всего файлов: {files!.length}</h1>
