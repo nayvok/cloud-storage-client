@@ -46,9 +46,8 @@ const MediaPage = () => {
                 }}
             />
             <div
-                className={'files flex justify-between gap-y-6 sm:gap-3 sm:justify-start flex-wrap p-6 border-solid border-l-2 border-0 border-[#F6F7F8] w-full'}>
+                className={'files flex justify-center gap-2 sm:gap-3 md:justify-start flex-wrap py-6 md:p-6 border-solid border-t-2 md:border-t-0 md:border-l-2 border-0 border-[#F6F7F8] w-full'}>
                 {data.map((item) => (
-                    console.log("DEBUG!"),
                     <FileCard key={item.id} id={item.id} name={item.name} fileName={item.fileName} createdAt={item.createdAt}
                               mimeType={""} url={""}/>
                 ))}
